@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+@keyframes v-error-403-icon-animation
+{
+    0%
+    {
+        transform: rotateZ(0deg);
+    }
+    40%
+    {
+        transform: rotateZ(-20deg);
+    }
+    45%
+    {
+        transform: rotateZ(-15deg);
+    }
+    50%
+    {
+        transform: rotateZ(-20deg);
+    }
+    55%
+    {
+        transform: rotateZ(-15deg);
+    }
+    60%
+    {
+        transform: rotateZ(-20deg);
+    }
+    100%
+    {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes v-error-404-icon-animation
+{
+    0%
+    {
+        transform: rotateZ(0deg);
+    }
+    20%
+    {
+        transform: rotateZ(-60deg);
+    }
+    40%
+    {
+        transform: rotateZ(-10deg);
+    }
+    60%
+    {
+        transform: rotateZ(50deg);
+    }
+    80%
+    {
+        transform: rotateZ(-20deg);
+    }
+    100%
+    {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes v-error-500-icon-animation
+{
+    0%
+    {
+        transform: rotateZ(0deg);
+    }
+    20%
+    {
+        transform: rotateZ(-10deg);
+    }
+    40%
+    {
+        transform: rotateZ(5deg);
+    }
+    60%
+    {
+        transform: rotateZ(-5deg);
+    }
+    80%
+    {
+        transform: rotateZ(10deg);
+    }
+    100%
+    {
+        transform: rotateZ(0deg);
+    }
+}
+
+.v-error
+{
+    &-content
+    {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 700px;
+        height: 500px;
+        transform: translate(-50%,-50%);
+
+        &-title
+        {
+            text-align: center;
+            font-size: 240px;
+            font-weight: 700;
+            color: @main-color;
+            height: 260px;
+            line-height: 260px;
+            margin-top: 40px;
+        }
+        
+        &-message
+        {
+            display: block;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            color: #dddde2;
+        }
+    }
+    
+    &-button-strip
+    {
+        text-align: center;
+        padding: 20px 0;
+        margin-bottom: 40px;
+
+        .ivu-btn
+        {
+            width: 200px;
+
+            &:last-child
+            {
+                margin-left: 40px;
+            }
+        }
+    }
+}
+
+.v-error-403
+{
+    &-icon-1
+    {
+        position: relative;
+        display: inline-block;
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        border: 20px solid #ed3f14;
+        color: #ed3f14;
+        margin-right: 10px;
+
+        i
+        {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            display: inline-block;
+            font-size: 120px;
+            transform: translate(-50%,-50%);
+        }
+    }
+    
+    &-icon-2
+    {
+        position: relative;
+        display: inline-block;
+        width: 100px;
+        height: 190px;
+        margin-right: 10px;
+        border-radius: 50%;
+
+        i
+        {
+            position: absolute;
+            left: 20px;
+            display: inline-block;
+            font-size: 190px;
+            transform: translate(-50%,-60%);
+            transform-origin: center bottom;
+            animation: v-error-403-icon-animation 2.8s ease 0s infinite;
+        }
+    }
+}
+
+.v-error-404
+{
+    &-icon
+    {
+        display: inline-block;
+        color: #19be6b;
+        font-size: 230px;
+        animation: v-error-404-icon-animation 3s ease 0s infinite alternate;
+    }
+}
+
+.v-error-500
+{
+    &-icon
+    {
+        position: relative;
+        display: inline-block;
+        width: 170px;
+        height: 170px;
+        margin-right: 10px;
+        border-radius: 50%;
+        border: 20px solid #ed3f14;
+        color: #ed3f14;
+        
+        i
+        {
+            position: absolute;
+            display: inline-block;
+            left: 10px;
+            bottom: -10px;
+            font-size: 120px;
+            transform-origin: center bottom;
+            animation: v-error-500-icon-animation 3s ease 0s infinite alternate;
+        }
+    }
+}

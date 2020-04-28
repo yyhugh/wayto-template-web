@@ -1,0 +1,96 @@
+/*!
+ * Authors:
+ *      jason <jasonsoop@gmail.com>
+ * 
+ * Copyright (C) 2010-present Flagwind Inc. All rights reserved. 
+ */
+@charset "UTF-8";
+
+.u-user-profile-modal
+{
+    &-avatar
+    {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 120px;
+        height: 120px;
+
+        .ivu-avatar
+        {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            color: @white-color;
+            background-color: @bg-main;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border: 1px solid @border-color;
+            font-size: 50px;
+
+            > * {
+                line-height: 120px;
+            }
+        }
+
+        .u-user-avatar
+        {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            color: @white-color;
+            background-color: @bg-main;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border: 1px solid @border-color;
+            font-size: 50px;
+
+            > * {
+                line-height: 120px;
+            }
+        }
+
+        .avatar-upload-label
+        {
+            display: block;
+        }
+
+        .avatar-upload
+        {
+            position: relative;
+            text-indent: -999999999px;
+            opacity: 0;
+        }
+    }
+
+    .ivu-modal-body
+    {
+        position: relative;
+    }
+
+    &-profile
+    {
+        width: 400px;
+        margin-left: 120px;
+
+        textarea
+        {
+            resize: none;
+        }
+    }
+}
+
+.profile-avatar-crop
+{
+    .ivu-modal-wrap
+    {
+        z-index: 10001;
+    }
+    .profile-avatar-cropper
+    {
+        max-height: 400px;
+        overflow: hidden;
+    }
+}
